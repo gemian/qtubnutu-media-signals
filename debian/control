@@ -8,7 +8,7 @@ Build-Depends: cmake,
                libgles2-mesa-dev,
                libqt5opengl5-dev,
                pkg-config,
-               qt5-default,
+               qtbase5-dev,
 Standards-Version: 3.9.4
 Homepage: https://launchpad.net/qtubuntu-media-signals
 # If you don't have commit rights to lp:qtubuntu-media-signals but need to
@@ -23,7 +23,6 @@ Architecture: any
 Depends: ${misc:Depends},
          libqt5opengl5-dev,
          libqtubuntu-media-signals1 (= ${binary:Version}),
-         qt5-default,
 Description: Development headers and libraries for qtubuntu-media-signals
  Contains the header files for use in developing applications that use
  the qtubuntu-media-signals library.
