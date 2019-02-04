@@ -1,0 +1,12 @@
+prefix=@PREFIX@
+exec_prefix=@EXEC_PREFIX@
+libdir=${exec_prefix}/lib/@CMAKE_LIBRARY_ARCHITECTURE@
+includedir=${prefix}/@INCLUDE_INSTALL_DIR@
+
+Name: @QTUBUNTU_MEDIA_SIGNALS_LIBNAME@
+Description: Library that coordinates qtvideo-node, qtubuntu-camera and qtubuntu-media.
+Version: @VERSION@
+
+Requires: @QT_PKGCONFIG_DEPENDENCIES@
+Libs: -L${libdir} -l@QTUBUNTU_MEDIA_SIGNALS_LIBNAME@
+Cflags: -I${includedir}
