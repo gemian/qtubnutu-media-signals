@@ -1,0 +1,3 @@
+usr/include/libqtubuntu-media-signals/*.h
+usr/lib/*/pkgconfig/*.pc
+usr/lib/*/libqtubuntu-media-signals.so
