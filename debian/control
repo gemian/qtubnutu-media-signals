@@ -1,0 +1,44 @@
+Source: qtubuntu-media-signals
+Section: libs
+Priority: optional
+Maintainer: Adam Boardman <adamboardman@gmail.com>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libgl1-mesa-dev | libgl-dev,
+               libgles2-mesa-dev,
+               libqt5opengl5-dev,
+               pkg-config,
+               qt5-default,
+Standards-Version: 3.9.4
+Homepage: https://launchpad.net/qtubuntu-media-signals
+# If you don't have commit rights to lp:qtubuntu-media-signals but need to
+# upload packaging changes, just go ahead. The developers will notice and sync
+# up the code again.
+Vcs-Bzr: lp:qtubuntu-media-signals
+Vcs-Browser: https://code.launchpad.net/qtubuntu-media-signals
+
+Package: libqtubuntu-media-signals-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends},
+         libqt5opengl5-dev,
+         libqtubuntu-media-signals1 (= ${binary:Version}),
+         qt5-default,
+Description: Development headers and libraries for qtubuntu-media-signals
+ Contains the header files for use in developing applications that use
+ the qtubuntu-media-signals library.
+ .
+ qtubuntu-media-signals is a library that coordinates qtvideo-node,
+ qtubuntu-camera and qtubuntu-media across thread contexts.
+
+Package: libqtubuntu-media-signals1
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Replaces: libqtubuntu-media-signals
+Conflicts: libqtubuntu-media-signals
+Provides: libqtubuntu-media-signals
+Description: Library that coordinates media libraries across thread contexts
+ Library that coordinates qtvideo-node, qtubuntu-camera and qtubuntu-media
+ across thread contexts.
